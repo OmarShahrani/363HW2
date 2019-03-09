@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+
+    <link rel="stylesheet" href="style.css"/>
+  
+    <title>QUIZ</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <meta name="description" content="A website or fun quizzes !"/>
+    <meta name="keywords" content="Quiz" />
+
+<script>
+
+function Result() {
+   const quiz = document.getElementById('quiz1');
+   var score = 0;
+   var solution = ["a", "c", "a", "b", "b", "d"]; 
+}
+
+
+$("form").on("submit", function(e){
+
+  var score = 0;
+  $questions = $(".question");
+  $questions.each(function(){
+    var answer = $(this).find("input:checked"),
+        key = answer.attr("name"),
+        val = answer.attr("value");
+
+    if(answer.length === 0){
+     score = score;
+    } else if (answers[key] !== val){
+      score = score;
+    } else {
+     score = score + 1;
+    }
+
+document.getElementById('results').innerHTML = "you got " + score + " out of 6";
+  });
+});
+
+var answers = {
+  "q1": "a",
+  "q2": "b",
+  "q3": "c",
+  "q4": "c",
+  "q5": "a",
+  "q6": "b"
+}
+
+</script>
+
+
+  </head>
+
+<body class="is-preload">
+
+			<header id="header">
+        <a class="logo" href="/main.html"> 
+          <img src="https://brand.kfupm.edu.sa/wp-content/uploads/2015/08/kfupm-seal.png" 
+          alt="KFUPM logo" 
+          height="143" 
+          width="143" 
+          align="middle" 
+          /></a>
+				
+			</header>
+   	
+
+			<section id="banner">
+			
+				
+			</section>
+
+		
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h2 id="meat" >The soul quiz :</h2>
+					</header>
+
+
+<div id="quiz1">
+
+<form>
+
+    <div class="question">
+
+        <p><strong>Q1</strong>: How many milligrams are in 0.2 decigrams?</p>
+       
+      <input type="radio" name="q1" value="a" id="q1a"><label for="q1a">20 milligrams</label><br/>
+
+      <input type="radio" name="q1" value="b" id="q1b"><label for="q1b">2000 milligrams</label><br/>  
+
+      <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">0.002 milligram</label><br/>
+      
+      <input type="radio" name="q1" value="c" id="q1c"><label for="q1c">0.00002 milligram</label><br/>  
+ 
+      
+
+    </div>
+
+    <div class="question">
+
+        <p><strong>Q2</strong>:What would be the volume in liters of 640 g of oil if the density of the oil is 0.8 g/mL?</p>
+        
+      <input type="radio" name="q2" value="a" id="q2a"><label for="q2a">800 liters</label><br/>
+
+      <input type="radio" name="q2" value="b" id="q2b"><label for="q2b">0.8 liter</label><br/>  
+
+      <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">512 liters</label><br/>      
+
+      <input type="radio" name="q2" value="c" id="q2c"><label for="q2c">0.5 liters</label><br/>  
+ 
+    
+
+    </div>
+
+ <div class="question">
+
+        <p><strong>Q1</strong>: Mary is English. She was born in London</p>
+       
+      <input type="radio" name="q3" value="a" id="q3a"><label for="q3a">Option 1</label><br/>
+
+      <input type="radio" name="q3" value="b" id="q3b"><label for="q3b">Option 1</label><br/>  
+
+      <input type="radio" name="q3" value="c" id="q3c"><label for="q3c">Option 1</label><br/>      
+ 
+   
+    </div>
+
+ <div class="question">
+
+        <p><strong>Q1</strong>: Five 1 peseta coins from Spain were dropped into a graduated cylinder containing 20.20 mL of water. The volume of the water increased to 22.05 mL. A single coin had a mass of 0.99 gram. What is the identity of the metal used for the Spanish 1 peseta coins?</p>
+       
+      <input type="radio" name="q4" value="a" id="q4a"><label for="q4a">aluminum</label><br/>
+
+      <input type="radio" name="q4" value="b" id="q4b"><label for="q4b">zinc</label><br/>  
+
+      <input type="radio" name="q4" value="c" id="q4c"><label for="q4c">copper</label><br/> 
+      
+      <input type="radio" name="q4" value="c" id="q4c"><label for="q4c">silver</label><br/> 
+ 
+      
+    </div>
+
+ <div class="question">
+
+        <p><strong>Q1</strong>:The mass of a metal cylinder was determined on an analytical balance to be 50.208 g. The volume of the cylinder was measured and determined to be 5.6 mL. The density of the metal cylinder, expressed to the proper number of significant figures, is...</p>
+       
+      <input type="radio" name="q5" value="a" id="q5a"><label for="q5a">8.9657 g/mL</label><br/>
+
+      <input type="radio" name="q5" value="b" id="q5b"><label for="q5b">9.0 g/mL</label><br/>  
+
+      <input type="radio" name="q5" value="c" id="q5c"><label for="q5c">0.11153 g/mL</label><br/>      
+
+      <input type="radio" name="q5" value="c" id="q5c"><label for="q5c">0.11 g/mL</label><br/> 
+ 
+
+    </div>
+
+ <div class="question">
+
+        <p><strong>Q1</strong>: Two students, Garrison and Isabella, determined the mass of an object on two different balances. The accepted mass of the object was 2.355 g. Garrison obtained values of 2.531 g, 2.537 g, 2.535 g and 2.533 g. Isabella obtained values of 2.350 g, 2.404 g, 2.296 g and 2.370 g. Which statement best describes the results that were obtained by Garrison and Isabella.</p>
+       
+      <input type="radio" name="q6" value="a" id="q6a"><label for="q6a">Garrison obtained the better accuracy.</label><br/>
+
+      <input type="radio" name="q6" value="b" id="q6b"><label for="q6b">Isabella obtained the better accuracy.</label><br/>  
+
+      <input type="radio" name="q6" value="c" id="q6c"><label for="q6c">Garrison obtained the better precision.</label><br/>   
+      
+      <input type="radio" name="q6" value="c" id="q6c"><label for="q6c">Isabella obtained the better precision.</label><br/>  
+ 
+      
+    </div>
+
+<br/> 
+
+    <input type="submit" value="submit" />
+
+</form>
+
+
+
+
+<div id="results">
+
+
+
+</div>
+
+	</div>
+	</section>
+
+  </body>
+
+</html>
+ 

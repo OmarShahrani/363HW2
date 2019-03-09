@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <center>
+    <head>
+      <link rel="stylesheet" href="style.css" />
+
+      <title>QUIZ form</title>
+      <meta charset="UTF-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no"
+      />
+      <meta name="description" content="A website or fun quizzes !" />
+      <meta name="keywords" content="Quiz" />
+
+      <script>
+        function validateForm() {
+          var x = document.forms["info"]["name"].value;
+          var y = document.forms["info"]["mail"].value;
+          if (x == "") {
+            alert("Name must be filled out");
+            return false;
+          }
+          if (y == "" || !validateEmail(y)) {
+            alert("Email is not acceptable");
+            return false;
+          }
+
+          document.getElementById("meat").innerHTML =
+            "Welcome " + x + "! Soon the quiz will start .. ";
+          startQuiz();
+        }
+
+        function validateEmail(email) {
+          var patt = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return patt.test(email);
+        }
+
+        function startQuiz() {
+          location.replace("soulquiz.html");
+        }
+      </script>
+    </head>
+
+    <body class="is-preload">
+      <header id="header">
+        <a class="logo" href="/main.html">
+          <img
+            src="https://brand.kfupm.edu.sa/wp-content/uploads/2015/08/kfupm-seal.png"
+            alt="KFUPM logo"
+            height="143"
+            width="143"
+            align="middle"
+        /></a>
+      </header>
+
+      <section id="banner"></section>
+      <script>
+        function showQuiz() {
+          window.open("/chemQuiz.html");
+        }
+      </script>
+      <section class="wrapper">
+        <div class="inner">
+          <header class="special">
+            <h2 id="meat">
+              Please enter your information below:
+            </h2>
+          </header>
+          <div>
+            <form name="info" onsubmit="return validateForm()" method="post">
+              Name:<br />
+              <input type="text" name="name" /><br />
+              Email:<br />
+              <input type="email" name="mail" /><br />
+              <input type="submit" value="Submit" onclick="showQuiz()" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </body>
+  </center>
+</html>

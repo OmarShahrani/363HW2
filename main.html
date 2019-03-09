@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <center>
+    <head>
+      <link rel="stylesheet" href="style.css" />
+
+      <title>QUIZ</title>
+      <meta charset="UTF-8" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no"
+      />
+      <meta name="description" content="A website or fun quizzes !" />
+      <meta name="keywords" content="Quiz" />
+
+      <script>
+        function showForm() {
+          window.open("/form.html");
+        }
+      </script>
+    </head>
+
+    <body class="is-preload">
+      <header id="header">
+        <a class="logo" href=/main.html">
+          <img
+            hre
+            src="https://brand.kfupm.edu.sa/wp-content/uploads/2015/08/kfupm-seal.png"
+            alt="KFUPM logo"
+            height="143"
+            width="143"
+            align="middle"
+        /></a>
+        <nav>
+          <p>Where all quizzes come to life</p>
+        </nav>
+      </header>
+
+      <section id="banner"></section>
+
+      <section class="wrapper">
+        <div class="inner">
+          <header class="special">
+            <h2 id="meat">Hi, please, pick a quiz!</h2>
+          </header>
+
+          <table border="1">
+            <tbody class="context-menu-one">
+              <tr>
+                <td align="middle">
+									<button
+									id="math"
+                    type="button"
+                    onclick="alert('This quiz is not ready!')"
+                  >
+                    The math quiz
+                  </button>
+                </td>
+                <td align="middle">
+									<button
+									id="phys"
+                    type="button"
+                    onclick="alert('This quiz is not ready!')"
+                  >
+                    The Physics quiz
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td align="middle">
+									<button 
+									id="chem"
+									type="button" onclick="showForm()">
+                    The chemistry quiz
+                  </button>
+                </td>
+                <td align="middle">
+									<button 
+									id="bio"
+									type="button" onclick="alert('none!')">
+                    The biology quiz
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </body>
+  </center>
+</html>
